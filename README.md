@@ -1,5 +1,5 @@
 # Moview-Reviews
-![Preview](https://github.com/Maandraj/Movie-Review/blob/master/Images/icon_preview.svg)
+<img src="https://github.com/Maandraj/MovieReview/blob/master/Images/icon_preview.svg" width=50% height=50%>
 Статьи о кино критике, всё что связано с кино можете найти в этом приложении.
 
 
