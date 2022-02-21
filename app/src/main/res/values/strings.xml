@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Movie Review</string>
+    <string name="description">Description</string>
+    <string name="read">Read</string>
+    <string name="not_found">Not found :(</string>
+    <string name="results_num">Results : %s </string>
+    <string name="remove_text">Remove</string>
+    <string name="error_text_toast">Error :( </string>
+    <string name="home">Home</string>
+    <string name="favourites">Favourites</string>
+    <string name="error_search">An error occurred while updating the feed, what you are looking for may not be found</string>
+    <string name="error">An error occurred later</string>
+    <string name="append_end_text">End, nothing else found</string>
+    <string name="error__update_network">There was an error updating the feed, please check your internet connection</string>
+</resources>

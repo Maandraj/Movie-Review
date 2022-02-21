@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="description">Описание</string>
+    <string name="read">Прочитать</string>
+    <string name="not_found">Нечего не найдено :(</string>
+    <string name="results_num">Найдено :  %s</string>
+    <string name="remove_text">Очистить</string>
+    <string name="error_text_toast">Возникла некая ошибка :( </string>
+    <string name="home">Главная</string>
+    <string name="favourites">Избранное</string>
+    <string name="error_search">Возникла ошибка при обновлении ленты, возможно чего вы ищете не найдено</string>
+    <string name="error">Возникла ошибка, повторите попытку позже</string>
+    <string name="append_end_text">Конец, больше нечего не найдено</string>
+    <string name="error__update_network">Возникла ошибка при обновлении ленты, проверьте подключение к интернету</string>
+</resources>
