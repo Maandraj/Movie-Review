@@ -34,25 +34,18 @@ class ReviewsPageSource (
         val pageSize: Int = params.loadSize.coerceAtMost(MAX_RESULT)
         val response = api.getReviews(query, page)
         return if (response.isSuccessful) {
-            val result =  checkNotNull(response.body()?.resultsRes).map {  resultsMapper.map(it) }
+            var result =  checkNotNull(response.body()?.resultsRes).map {  resultsMapper.map(it) }
             var favourites: List<Favourites?>?
 
             withContext(Dispatchers.IO){
                 favourites = favoritesDao.getAll()
            }
-            val resultsSort = result.toMutableList()
-            resultsSort.forEachIndexed { index, res ->
-                if (favourites != null) {
-                    for (fav in favourites!!)
-                        if (res.url == fav?.url) {
-                            resultsSort[index] = res.copy(favourite = true)
-                            break
-                        }
-                }
+            if (favourites != null)
+                result =  resultsMapper.mapToFavourite(result.toMutableList(), favourites!!.filterNotNull())
 
-            }
-            val nextKey = if (resultsSort.size < pageSize) null else page + ELEMENTS
-            LoadResult.Page(resultsSort, prevKey= null, nextKey = nextKey)
+
+            val nextKey = if (result.size < pageSize) null else page + ELEMENTS
+            LoadResult.Page(result, prevKey= null, nextKey = nextKey)
         } else {
             LoadResult.Error(HttpException(response))
         }
