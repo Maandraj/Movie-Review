@@ -13,7 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.*
 import by.kirich1409.viewbindingdelegate.viewBinding
-import com.example.moviereview.BuildConfig
+import com.chibatching.kotpref.BuildConfig
 import com.example.moviereview.R
 import com.example.moviereview.databinding.FragmentReviewBinding
 import com.example.moviereview.features.review.domain.model.room.Favourites
@@ -126,7 +126,7 @@ class ReviewFragment : Fragment(R.layout.fragment_review), ClickAddListener, Cli
                             binding.listProgress.visibility = View.VISIBLE
 
                         Toast.makeText(requireContext(),
-                            getString(R.string.error__update_network),
+                            getString(R.string.error_update_network),
                             Toast.LENGTH_LONG).show()
 
                             while (!requireContext().checkNetwork()) {

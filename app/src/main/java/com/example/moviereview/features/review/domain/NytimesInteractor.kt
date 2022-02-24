@@ -7,21 +7,21 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class NytimesInteractor @Inject constructor(
-    private val nytimesRepo: NytimesRepo
+    private val nytimesRepo: NytimesRepo,
 ) {
-    suspend fun getReviews(query:String = "") = withContext(Dispatchers.IO) {
+    suspend fun getReviews(query: String = "") =
         nytimesRepo.getReviews(query)
-    }
-    suspend fun getFavourites() = withContext(Dispatchers.IO) {
+
+    suspend fun getFavourites() =
         nytimesRepo.getFavourites()
-    }
-    suspend fun getFavourites(query:String = "") = withContext(Dispatchers.IO) {
+
+    suspend fun getFavourites(query: String = "") =
         nytimesRepo.getFavourites(query)
-    }
-    suspend fun saveFavourites(favourites: Favourites) = withContext(Dispatchers.IO) {
+
+    suspend fun saveFavourites(favourites: Favourites) =
         nytimesRepo.saveFavourite(favourites)
-    }
-    suspend fun removeFavourites(favourites: Favourites) = withContext(Dispatchers.IO) {
+
+    suspend fun removeFavourites(favourites: Favourites) =
         nytimesRepo.removeFavourite(favourites)
-    }
+
 }

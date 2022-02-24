@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Movie Review</string>
+    <string name="app_name" translatable="false">Movie Review</string>
     <string name="description">Description</string>
     <string name="read">Read</string>
     <string name="not_found">Not found :(</string>
@@ -11,5 +11,5 @@
     <string name="error_search">An error occurred while updating the feed, what you are looking for may not be found</string>
     <string name="error">An error occurred later</string>
     <string name="append_end_text">End, nothing else found</string>
-    <string name="error__update_network">There was an error updating the feed, please check your internet connection</string>
+    <string name="error_update_network">There was an error updating the feed, please check your internet connection</string>
 </resources>
