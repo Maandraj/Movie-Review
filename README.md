@@ -19,7 +19,7 @@
 - Moshi
 - ViewBinding
 - Paging 3
-
+- Unit-test
 ## Структура
 - MVVM
 - Clean architecture
